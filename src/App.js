@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import NavBar from './components/NavBar';
+import Darkmode from 'darkmode-js';
+
+// Loading dark mode
+new Darkmode({
+    time: '0.5s',
+    mixColor: '#fff',
+    backgroundColor: '#fff',
+    buttonColorDark: '#100f2c',
+    buttonColorLight: '#fff',
+    saveInCookies: false,
+    label: '🌓'
+}).showWidget();
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <NavBar />
+        </div>
+    );
 }
 
 export default App;
