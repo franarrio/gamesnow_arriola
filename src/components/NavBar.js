@@ -1,14 +1,14 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import CartWidget from './CartWidget';
 import logo from '../assets/primary.png';
+import { RiMenu5Line } from 'react-icons/ri';
 
 const Categories = ['Home', 'Shop', 'Contact'];
 
 const NavBar = () => {
     const getCategories = Categories.map((category) => (
         <li key={category} className="nav-item small">
-            <a className="nav-link active" aria-current="page" href={`#${category.toLowerCase()}`}>
+            <a className="nav-link active" aria-current="page" href={`${category.toLowerCase()}`}>
                 {category}
             </a>
         </li>
@@ -16,7 +16,7 @@ const NavBar = () => {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-5">
                 <div className="container">
                     <button
                         className="navbar-toggler"
@@ -27,18 +27,18 @@ const NavBar = () => {
                         aria-expanded="false"
                         aria-label="Toggle navigation"
                     >
-                        <FontAwesomeIcon icon={faBars} />
+                        <button className="btn btn-lg link-secondary">
+                            <RiMenu5Line />
+                        </button>
                     </button>
-                    <a className="navbar-brand fw-bold" href={`#${Categories[0]}`}>
+                    <a className="flex-grow-1 navbar-brand fw-bold" href={Categories[0].toLowerCase()}>
                         <img alt="GamesNow" className="brand-image" src={logo} />
                         <span>GamesNow</span>
                     </a>
                     <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav fw-bolder mt-4 m-lg-0"> {getCategories} </ul>
+                        <ul className="navbar-nav fw-bolder mt-4 m-lg-0 ps-3"> {getCategories} </ul>
                     </div>
-                    <button className="btn">
-                        <FontAwesomeIcon icon={faShoppingCart} />
-                    </button>
+                    <CartWidget />
                 </div>
             </nav>
         </div>

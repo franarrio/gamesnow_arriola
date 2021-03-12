@@ -1,21 +1,14 @@
 import NavBar from './components/NavBar';
-import Darkmode from 'darkmode-js';
+import ItemListContainer from './components/ItemListContainer';
+import DarkMode from './DarkMode';
 
-// Loading dark mode
-new Darkmode({
-    time: '0.5s',
-    mixColor: '#fff',
-    backgroundColor: '#fff',
-    buttonColorDark: '#100f2c',
-    buttonColorLight: '#fff',
-    saveInCookies: false,
-    label: '🌓'
-}).showWidget();
+DarkMode.showWidget();
 
 function App() {
     return (
         <div className="App">
             <NavBar />
+            <ItemListContainer greeting={'Hi! here from gamesnow! 😎😎'} />
         </div>
     );
 }

@@ -3112,8 +3112,8 @@ fieldset:disabled .btn {
 
 .btn-secondary {
   color: #000;
-  background-color: #57dcb7;
-  border-color: #57dcb7;
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
 }
 
 .btn-secondary:hover {
@@ -3151,8 +3151,8 @@ fieldset:disabled .btn {
 .btn-secondary:disabled,
 .btn-secondary.disabled {
   color: #000;
-  background-color: #57dcb7;
-  border-color: #57dcb7;
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
 }
 
 .btn-outline-primary {
@@ -3196,14 +3196,14 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-secondary {
-  color: #57dcb7;
-  border-color: #57dcb7;
+  color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
 }
 
 .btn-outline-secondary:hover {
   color: #000;
-  background-color: #57dcb7;
-  border-color: #57dcb7;
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
 }
 
 .btn-check:focus+.btn-outline-secondary,
@@ -3217,8 +3217,8 @@ fieldset:disabled .btn {
 .btn-outline-secondary.active,
 .btn-outline-secondary.dropdown-toggle.show {
   color: #000;
-  background-color: #57dcb7;
-  border-color: #57dcb7;
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
 }
 
 .btn-check:checked+.btn-outline-secondary:focus,
@@ -3231,7 +3231,7 @@ fieldset:disabled .btn {
 
 .btn-outline-secondary:disabled,
 .btn-outline-secondary.disabled {
-  color: #57dcb7;
+  color: var(--bs-secondary);
   background-color: transparent;
 }
 
@@ -4237,7 +4237,6 @@ fieldset:disabled .btn {
 
 .navbar-light .navbar-toggler {
   color: rgba(0, 0, 0, 0.55);
-  border-color: rgba(0, 0, 0, 0.1);
   margin-right: 1em;
 }
 
@@ -6138,7 +6137,7 @@ fieldset:disabled .btn {
 }
 
 .link-secondary {
-  color: #57dcb7;
+  color: var(--bs-secondary);
 }
 
 .link-secondary:hover,
@@ -6505,7 +6504,7 @@ fieldset:disabled .btn {
 }
 
 .border-secondary {
-  border-color: #57dcb7 !important;
+  border-color: var(--bs-secondary) !important;
 }
 
 .border-white {
@@ -7267,7 +7266,7 @@ fieldset:disabled .btn {
 }
 
 .text-secondary {
-  color: #57dcb7 !important;
+  color: var(--bs-secondary) !important;
 }
 
 .text-white {
@@ -7315,7 +7314,7 @@ fieldset:disabled .btn {
 }
 
 .bg-secondary {
-  background-color: #57dcb7 !important;
+  background-color: var(--bs-secondary) !important;
 }
 
 .bg-body {
