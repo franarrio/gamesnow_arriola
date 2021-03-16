@@ -1,7 +1,8 @@
 import React from 'react';
 import CartWidget from './CartWidget';
-import logo from '../assets/primary.png';
 import { RiMenu5Line } from 'react-icons/ri';
+import logo from '../assets/primary.png';
+import './NavBar.css';
 
 const Categories = ['Home', 'Shop', 'Contact'];
 
@@ -17,7 +18,7 @@ const NavBar = () => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-5">
-                <div className="container">
+                <div className="container-fluid container-lg">
                     <button
                         className="navbar-toggler"
                         type="button"

@@ -1,9 +1,13 @@
+import App from './App';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import '../node_modules/bootstrap/dist/js/bootstrap.min';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
+// import DarkMode from './DarkMode';
+
+// DarkMode.showWidget();
 
 ReactDOM.render(
     <React.StrictMode>
