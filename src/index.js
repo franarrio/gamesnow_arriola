@@ -2,8 +2,6 @@ import App from './App';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 // import DarkMode from './DarkMode';
 
