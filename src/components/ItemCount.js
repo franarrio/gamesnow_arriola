@@ -7,16 +7,16 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
     useEffect(() => {
         onAdd(count);
-    }, [count]);
+    });
 
     return (
         <div className="item-count">
             <div className="input-group mb-3">
                 <button
                     className="btn btn-outline-secondary"
-                    onClick={(e) => count < stock && setCount(count + 1)}
+                    onClick={(e) => count > 0 && setCount(count - 1)}
                 >
-                    <RiAddCircleFill />
+                    <RiIndeterminateCircleFill />
                 </button>
                 <input
                     type="quntity"
@@ -24,11 +24,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                     value={count}
                     onChange={() => {}}
                 />
+
                 <button
                     className="btn btn-outline-secondary"
-                    onClick={(e) => count > 0 && setCount(count - 1)}
+                    onClick={(e) => count < stock && setCount(count + 1)}
                 >
-                    <RiIndeterminateCircleFill />
+                    <RiAddCircleFill />
                 </button>
             </div>
         </div>
