@@ -1,13 +1,13 @@
 .item-card {
-    width: 18rem;
+    width: 19em;
 }
 
 .item-card img {
-    height: 300px;
+    height: 340px;
 }
 
 .card-body {
-    height: 180px;
+    height: auto;
 }
 
 .card {

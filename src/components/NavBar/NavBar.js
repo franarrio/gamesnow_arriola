@@ -1,16 +1,32 @@
 import React from 'react';
-import CartWidget from './CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 import { RiMenu5Line } from 'react-icons/ri';
-import logo from '../assets/primary.png';
+import logo from '../../assets/primary.png';
 import './NavBar.css';
 
-const Categories = ['Home', 'Shop', 'Contact'];
-
+const Categories = [
+    {
+        name: 'Anime & Videos',
+        url: 'animeandvideos'
+    },
+    {
+        name: 'Manga & Books',
+        url: 'mangaandbooks'
+    },
+    {
+        name: 'Figures',
+        url: 'figures'
+    },
+    {
+        name: 'Games',
+        url: 'games'
+    }
+];
 const NavBar = () => {
     const getCategories = Categories.map((category) => (
-        <li key={category} className="nav-item small">
-            <a className="nav-link active" aria-current="page" href={`${category.toLowerCase()}`}>
-                {category}
+        <li key={category.name} className="nav-item small">
+            <a className="nav-link active" aria-current="page" href={category.url}>
+                {category.name}
             </a>
         </li>
     ));
@@ -28,11 +44,11 @@ const NavBar = () => {
                         aria-expanded="false"
                         aria-label="Toggle navigation"
                     >
-                        <button className="btn btn-lg link-secondary">
+                        <span className="btn btn-lg link-secondary">
                             <RiMenu5Line />
-                        </button>
+                        </span>
                     </button>
-                    <a className="flex-grow-1 navbar-brand fw-bold" href={Categories[0].toLowerCase()}>
+                    <a className="flex-grow-1 navbar-brand fw-bold" href="/">
                         <img alt="GamesNow" className="brand-image" src={logo} />
                         <span>GamesNow</span>
                     </a>
