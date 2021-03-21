@@ -3,11 +3,9 @@ import { RiShoppingCart2Line } from 'react-icons/ri';
 
 const CartWidget = () => {
     return (
-        <div>
-            <button className="btn btn-lg link-secondary">
-                <RiShoppingCart2Line />
-            </button>
-        </div>
+        <button className="btn btn-lg link-secondary bg-warning text-body">
+            <RiShoppingCart2Line />
+        </button>
     );
 };
 

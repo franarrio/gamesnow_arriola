@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import ItemList from '../../components/ItemList/ItemList';
-import ItemCount from '../../components/ItemCount/ItemCount';
+import ItemCount from '../ItemCount/ItemCount';
+import ItemList from '../ItemListContainer/ItemList/ItemList';
 
-const Items = [
+const ItemsMock = [
     {
         id: 8568,
         title: 'Dragon Ball Super - Part Seven',
@@ -25,7 +25,7 @@ const Items = [
 const ItemListContainer = ({ greeting }) => {
     const [items, setItems] = useState([]);
     const promise = new Promise((resolve, reject) => {
-        setTimeout(() => resolve(Items), 2000);
+        setTimeout(() => resolve(ItemsMock), 2000);
     });
     const onAdd = (count) => {
         console.log('count', count);
@@ -35,13 +35,11 @@ const ItemListContainer = ({ greeting }) => {
         setItems(await promise);
     };
 
-    useEffect(() => {
-        getItems();
-    });
+    useEffect(() => getItems(), []);
 
     return (
         <div className="container">
-            <h3>{greeting}</h3>
+            <h3 className="font-monospace">{greeting}</h3>
             <ItemCount stock={5} initial={0} onAdd={onAdd} />
             <ItemList items={items} />
         </div>

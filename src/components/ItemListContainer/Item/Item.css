@@ -4,6 +4,7 @@
 
 .item-card img {
     height: 340px;
+    border: none;
 }
 
 .card-body {

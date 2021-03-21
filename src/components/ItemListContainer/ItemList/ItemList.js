@@ -1,10 +1,10 @@
 import React from 'react';
 import Item from '../Item/Item';
-import '../ItemList/ItemList.css';
+import './ItemList.css';
 
 const ItemList = ({ items }) => {
     return (
-        <div>
+        <div className="container mt-5">
             <ul className="p-0">
                 {items.map((item) => {
                     return (

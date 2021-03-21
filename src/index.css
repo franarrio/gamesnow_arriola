@@ -1,3 +1,8 @@
 :root {
     --bs-font-sans-serif: 'Montserrat', 'Heebo', sans-serif;
+    --bs-yellow: #ffc107;
+}
+
+.price {
+    letter-spacing: 0.1em;
 }

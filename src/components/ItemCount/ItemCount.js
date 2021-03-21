@@ -6,7 +6,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     const [count, setCount] = useState(initial < stock ? initial : 0);
 
     return (
-        <div className="item-count">
+        <div className="item-count mt-5">
             <div className="input-group mb-3">
                 <span className="btn btn-outline-secondary" onClick={(e) => count > 0 && setCount(count - 1)}>
                     <RiIndeterminateCircleFill />
