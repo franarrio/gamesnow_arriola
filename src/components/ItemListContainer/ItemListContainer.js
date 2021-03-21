@@ -24,14 +24,15 @@ const ItemsMock = [
 ];
 const ItemListContainer = ({ greeting }) => {
     const [items, setItems] = useState([]);
-    const promise = new Promise((resolve, reject) => {
-        setTimeout(() => resolve(ItemsMock), 2000);
-    });
     const onAdd = (count) => {
         console.log('count', count);
         console.log('onAdd ItemListContainer');
     };
-    const getItems = async function () {
+    const getItems = async () => {
+        const promise = new Promise((resolve) => {
+            setTimeout(() => resolve(ItemsMock), 2000);
+        });
+
         setItems(await promise);
     };
 

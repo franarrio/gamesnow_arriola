@@ -10,10 +10,11 @@ const ItemMock = {
 };
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
-    const promise = new Promise((resolve, reject) => {
-        setTimeout(() => resolve(ItemMock), 2000);
-    });
-    const getItems = async function () {
+    const getItems = async () => {
+        const promise = new Promise((resolve) => {
+            setTimeout(() => resolve(ItemMock), 2000);
+        });
+
         setItem(await promise);
     };
 
