@@ -32,7 +32,7 @@ const NavBar = () => {
     ));
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-5 mt-2">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-5">
             <div className="container-fluid container-lg">
                 <button
                     className="navbar-toggler"
@@ -49,7 +49,7 @@ const NavBar = () => {
                 </button>
                 <a className="flex-grow-1 navbar-brand fw-bold" href="/">
                     <img alt="GamesNow" className="brand-image" src={logo} />
-                    <span className="font-monospace fs-2 title">GamesNow</span>
+                    <span className="font-monospace fs-4 title">GamesNow</span>
                 </a>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav fw-bolder mt-4 m-lg-0"> {getCategories} </ul>

@@ -26,7 +26,6 @@ const ItemListContainer = ({ greeting }) => {
     const [items, setItems] = useState([]);
     const onAdd = (count) => {
         console.log('count', count);
-        console.log('onAdd ItemListContainer');
     };
     const getItems = async () => {
         const promise = new Promise((resolve) => {

@@ -11,9 +11,7 @@ const ItemMock = {
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     const getItems = async () => {
-        const promise = new Promise((resolve) => {
-            setTimeout(() => resolve(ItemMock), 2000);
-        });
+        const promise = new Promise((resolve) => setTimeout(() => resolve(ItemMock), 2000));
 
         setItem(await promise);
     };
@@ -22,7 +20,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div className="container pb-5">
-            <ItemDetail className="rounded" item={item} />
+            <ItemDetail item={item} />
         </div>
     );
 };
