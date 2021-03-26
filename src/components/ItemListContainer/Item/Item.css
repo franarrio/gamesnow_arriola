@@ -1,9 +1,11 @@
 .item-card {
     width: 19em;
+    text-decoration: none;
+    color: var(--bs-dark);
 }
 
 .item-card img {
-    height: 340px;
+    height: 355px;
     border: none;
 }
 

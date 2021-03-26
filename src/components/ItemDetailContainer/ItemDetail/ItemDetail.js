@@ -1,12 +1,13 @@
 import React from 'react';
+import './ItemDetail.css';
 
 const ItemDetail = ({ item }) => {
     return (
         <div>
             {item && item.price && (
                 <div className="row shadow p-5 rounded-3 shadow">
-                    <div className="col-md">
-                        <img src={item.pictureUrl} alt={item.title} />
+                    <div className="col-md text-center">
+                        <img className="img-thumbnail" src={item.pictureUrl} alt={item.title} />
                     </div>
                     <div className="col-md mb-5 mt-5 p-5 bg-warning">
                         <h3 className="font-monospace fw-bold">{item.title}</h3>

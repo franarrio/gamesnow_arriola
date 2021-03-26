@@ -1,5 +1,6 @@
 import React from 'react';
 import CartWidget from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 import { RiMenu5Line } from 'react-icons/ri';
 import logo from '../../assets/primary.png';
 import './NavBar.css';
@@ -7,27 +8,27 @@ import './NavBar.css';
 const Categories = [
     {
         name: 'Anime & Videos',
-        url: 'animeandvideos'
+        id: 1
     },
     {
         name: 'Manga & Books',
-        url: 'mangaandbooks'
+        id: 2
     },
     {
         name: 'Figures',
-        url: 'figures'
+        id: 3
     },
     {
         name: 'Games',
-        url: 'games'
+        id: 4
     }
 ];
 const NavBar = () => {
     const getCategories = Categories.map((category) => (
         <li key={category.name} className="nav-item small m-1">
-            <a className="nav-link active" aria-current="page" href={category.url}>
+            <Link className="nav-link active" aria-current="page" to={`/category/${category.id}`}>
                 {category.name}
-            </a>
+            </Link>
         </li>
     ));
 
@@ -47,10 +48,10 @@ const NavBar = () => {
                         <RiMenu5Line />
                     </span>
                 </button>
-                <a className="flex-grow-1 navbar-brand fw-bold" href="/">
+                <Link className="flex-grow-1 navbar-brand fw-bold" to="/">
                     <img alt="GamesNow" className="brand-image" src={logo} />
-                    <span className="font-monospace fs-4 title">GamesNow</span>
-                </a>
+                    <span className="fs-4 title">GamesNow</span>
+                </Link>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav fw-bolder mt-4 m-lg-0"> {getCategories} </ul>
                 </div>
