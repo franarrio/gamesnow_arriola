@@ -1,6 +1,10 @@
 :root {
     --bs-font-sans-serif: 'Montserrat', 'Heebo', sans-serif;
-    --bs-yellow: #ffc107;
+    --bs-warning: #feff00;
+}
+
+.bg-warning{
+    background-color: var(--bs-warning) !important;
 }
 
 .price {

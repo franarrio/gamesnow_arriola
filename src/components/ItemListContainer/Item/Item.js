@@ -10,7 +10,7 @@ const Item = ({ item }) => {
                 <h6 className="card-title fw-bold">{item.title}</h6>
                 <div>
                     <span className="badge bg-warning text-dark">Id: {item.id}</span>
-                    <span className="badge bg-dark m-1 price">Price: ${item.price}</span>
+                    <span className="badge bg-dark m-1 price float-end fs-6">${item.price}</span>
                 </div>
             </div>
         </NavLink>

@@ -2,38 +2,38 @@ import React from 'react';
 import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
 import { RiMenu5Line } from 'react-icons/ri';
-import logo from '../../assets/primary.png';
+import logo from '../../assets/gamesnow.jpeg';
 import './NavBar.css';
 
 const Categories = [
     {
-        name: 'Anime & Videos',
+        name: 'PlayStation',
         id: 1
     },
     {
-        name: 'Manga & Books',
+        name: 'Xbox',
         id: 2
     },
     {
-        name: 'Figures',
+        name: 'Nintendo',
         id: 3
     },
     {
-        name: 'Games',
+        name: 'PC',
         id: 4
     }
 ];
 const NavBar = () => {
     const getCategories = Categories.map((category) => (
         <li key={category.name} className="nav-item small m-1">
-            <Link className="nav-link active" aria-current="page" to={`/category/${category.id}`}>
+            <Link className="nav-link active text-light" aria-current="page" to={`/category/${category.id}`}>
                 {category.name}
             </Link>
         </li>
     ));
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-5">
+        <nav className="navbar navbar-expand-lg navbar-light bg-dark shadow-sm mb-5">
             <div className="container-fluid container-lg">
                 <button
                     className="navbar-toggler"
@@ -50,7 +50,6 @@ const NavBar = () => {
                 </button>
                 <Link className="flex-grow-1 navbar-brand fw-bold" to="/">
                     <img alt="GamesNow" className="brand-image" src={logo} />
-                    <span className="fs-4 title">GamesNow</span>
                 </Link>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav fw-bolder mt-4 m-lg-0"> {getCategories} </ul>
