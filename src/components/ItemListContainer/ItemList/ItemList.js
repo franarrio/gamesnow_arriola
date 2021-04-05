@@ -8,7 +8,7 @@ const ItemList = ({ items }) => {
             <ul className="p-0">
                 {items.map((item) => {
                     return (
-                        <li key={item.id}>
+                        <li className="mb-5" key={item.id}>
                             <Item item={item} />
                         </li>
                     );

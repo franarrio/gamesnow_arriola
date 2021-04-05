@@ -10,10 +10,10 @@ function App() {
                 <NavBar />
                 <Switch>
                     <Route exact path="/">
-                        <ItemListContainer greeting={'Hi! here from GamesNow! 😎😎'} />
+                        <ItemListContainer greeting={''} />
                     </Route>
                     <Route exact path="/category/:categoryId">
-                        <ItemListContainer greeting={'Hi! here from GamesNow! 😎😎'} />
+                        <ItemListContainer greeting={''} />
                     </Route>
                     <Route exact path="/item/:itemId">
                         <ItemDetailContainer />

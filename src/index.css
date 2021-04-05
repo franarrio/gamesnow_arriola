@@ -3,10 +3,14 @@
     --bs-warning: #feff00;
 }
 
-.bg-warning{
+.bg-warning {
     background-color: var(--bs-warning) !important;
 }
 
 .price {
     letter-spacing: 0.1em;
+}
+
+.text-warning {
+    color: var(--bs-warning) !important;
 }

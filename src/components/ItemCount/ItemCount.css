@@ -1,3 +1,14 @@
 .item-count {
     max-width: 300px;
 }
+
+.btn-add {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button span {
+    font-size: 0.82em;
+    margin: 0 1em 0 1em;
+}
