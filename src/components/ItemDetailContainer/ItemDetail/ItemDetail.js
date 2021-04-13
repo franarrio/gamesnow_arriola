@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import ItemCount from '../../ItemCount/ItemCount';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import ItemCount from '../../ItemCount/ItemCount';
+import { CartContext } from '../../Context/CartContext';
 import './ItemDetail.css';
 
 const ItemDetail = ({ item }) => {
     const [count, setCount] = useState(0);
+    const { addItem } = useContext(CartContext);
     const ondAddHandler = (count) => setCount(count);
 
     return (
@@ -19,10 +21,17 @@ const ItemDetail = ({ item }) => {
                         <p className="fw-light mb-4 mt-4 text-secondary">{item.description}</p>
                         <span className="badge bg-dark fs-6 price">${item.price}</span>
                         {count === 0 ? (
-                            <ItemCount stock={5} initial={0} onAdd={ondAddHandler} />
+                            <ItemCount stock={item.stock} initial={0} onAdd={ondAddHandler} />
                         ) : (
                             <Link className="btn border-secondary btn-add" to="/cart">
-                                <button className="btn border-secondary btn-add">Finish Order</button>
+                                <button
+                                    className="btn border-secondary btn-add"
+                                    onClick={() => {
+                                        addItem(item, count);
+                                    }}
+                                >
+                                    Finish Order
+                                </button>
                             </Link>
                         )}
                     </div>
