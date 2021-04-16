@@ -7,7 +7,7 @@ const ItemDetailContainer = () => {
     const [items, setItems] = useState([]);
     const { itemId } = useParams();
     const getItems = async () => {
-        const promise = new Promise((resolve) => setTimeout(() => resolve(ItemsMock), 2000));
+        const promise = new Promise((resolve) => setTimeout(() => resolve(ItemsMock), 1000));
 
         setItems(await promise);
     };

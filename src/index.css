@@ -14,3 +14,7 @@
 .text-warning {
     color: var(--bs-warning) !important;
 }
+
+.btn-warning {
+    background-color: var(--bs-warning);
+}

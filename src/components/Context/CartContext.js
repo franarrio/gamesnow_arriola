@@ -18,18 +18,33 @@ export const ContextProvider = ({ children }) => {
             setCart([...cart, { item: item, quantity: quantity }]);
         }
     };
+
     const removeItem = (itemId) => {
         if (!itemId) return;
 
-        setCart(cart.filter((x) => x.id === itemId));
+        setCart(cart.filter((x) => x.item.id != itemId));
     };
+
     const clear = () => {
         setCart([]);
     };
+
     const isInCart = (id) => cart.find((x) => x.item.id === id);
 
+    const getTotal = () => {
+        return cart.reduce((total, line) => {
+            return (total += line.item.price);
+        }, 0);
+    };
+
+    const getSize = () => {
+        return cart.reduce((size, line) => {
+            return (size += line.quantity);
+        }, 0);
+    };
+
     return (
-        <CartContext.Provider value={{ cart, addItem, removeItem, clear, isInCart }}>
+        <CartContext.Provider value={{ cart, addItem, removeItem, clear, isInCart, getTotal, getSize }}>
             {children}
         </CartContext.Provider>
     );
